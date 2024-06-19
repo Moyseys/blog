@@ -7,6 +7,11 @@ class Aplication{
     
   }
 
+  middleware(){
+    this._app.use(express.json())
+    this._app.use(express.urlencoded({extended: true}))
+  }
+
   get app(): Express{
     return this._app
   }
